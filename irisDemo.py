@@ -29,7 +29,8 @@ print(dataset.groupby('class').size())
 
 
 # Visualize data with box and whisker diagrams
-dataset.plot(kind='box', subplot=True, layout=(2,2), sharex=False, sharey=False)
+#dataset.plot(kind='box', subplot=True, layout=(2,2), sharex=False, sharey=False)
+dataset.plot(kind='box', layout=(2,2), sharex=False, sharey=False)
 plt.show()
 
 # Visualize data with histograms
