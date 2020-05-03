@@ -17,7 +17,7 @@ class kNN(object):
     def __euclidean_distance(x1, y1, x2, y2):
         return math.sqrt((x1 - x2)**2 + (y1 - y2)**2)
 
-    # Compute the PDF 
+    # Compute the PDF
     @staticmethod
     def gaussian(dist, sigma=1):
         return 1./(math.sqrt(2.*math.pi)*sigma)*math.exp(-dist**2/(2*sigma**2))
@@ -34,7 +34,7 @@ class kNN(object):
             v = 0
             total_weight = 0
             for i in range(self.__k):
-                weight = self.gaussian(distances[i][1]) 
+                weight = self.gaussian(distances[i][1])
                 if self.__weighted:
                     v += distances[i][0]*weight
                 else:
