@@ -18,11 +18,11 @@ vis1 = sns.distplot(df['sepal_length'],bins=10, ax= ax[0])
 vis2 = sns.distplot(df['sepal_width'],bins=10, ax=ax[1])
 vis3 = sns.distplot(df['petal_length'],bins=10, ax= ax[2])
 vis4 = sns.distplot(df['petal_width'],bins=10, ax=ax[3])
-plt.show()
+#plt.show()
 
 # split data table into data X and class labels y
-X = df.ix[:,0:4].values
-y = df.ix[:,4].values
+X = df.iloc[:,0:4].values #ix depreciated in pandas changed to iloc
+y = df.iloc[:,4].values #ix depreciated in pandas changed to iloc
 
 # Standardize the data
 X_std = StandardScaler().fit_transform(X)
@@ -71,7 +71,7 @@ ax = fig.add_subplot(1,1,1)
 ax.set_xlabel('Principal Component 1', fontsize=15)
 ax.set_ylabel('Principal Component 2', fontsize=15)
 ax.set_title('2 Component PCA', fontsize=20)
-targets = ['setosa', 'versicolor', 'virginica']
+targets = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'] #updated to iris- as in csv"
 colors = ['r', 'g', 'b']
 for target, color in zip(targets, colors):
     indicesToKeep = finalDf['class'] == target
