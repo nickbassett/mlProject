@@ -11,13 +11,13 @@ hnode = 100
 onode = 10
 
 # Set the learning rate
-lr = 0.2 # default 0.1
+lr = 0.1 # default 0.1
 
 # Instantiate an ANN object named ann
 ann = ANN(inode, hnode, onode, lr)
 
 # Create the training list data
-dataFile = open('datasets/mnist_train.csv') #option  _100 dataset
+dataFile = open('datasets/mnist_train_100.csv') #option  _100 dataset
 dataList = dataFile.readlines()
 dataFile.close()
 
@@ -32,7 +32,7 @@ for record in dataList:
       ann.trainNet(inputT, train)
 
 # Create the test list data from an image
-img = Image.open('images/sevenbwh.jpg')
+img = Image.open('images/eight.jpg')
 img = img.resize((28,28), PIL.Image.ANTIALIAS)
 #img = img.resize((28,28), PIL.Image.NEAREST)
 
