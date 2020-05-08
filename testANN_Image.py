@@ -11,13 +11,13 @@ hnode = 100
 onode = 10
 
 # Set the learning rate
-lr = 0.1
+lr = 0.2 # default 0.1
 
 # Instantiate an ANN object named ann
 ann = ANN(inode, hnode, onode, lr)
 
 # Create the training list data
-dataFile = open('datasets/mnist_train_100.csv') #option  _100 dataset
+dataFile = open('datasets/mnist_train.csv') #option  _100 dataset
 dataList = dataFile.readlines()
 dataFile.close()
 
@@ -32,23 +32,36 @@ for record in dataList:
       ann.trainNet(inputT, train)
 
 # Create the test list data from an image
-img = Image.open('images/zerobwl.jpg')
+img = Image.open('images/sevenbwh.jpg')
 img = img.resize((28,28), PIL.Image.ANTIALIAS)
+#img = img.resize((28,28), PIL.Image.NEAREST)
+
+#Image it as a grayscale
+#plt.imshow(img, cmap="Greys", interpolation="None")
+#plt.show()
 
 # Read pixels into list
 pixels = list(img.getdata())
+#print ('pixels into list')
+#print (pixels) #added
 
 # Convert into single values from tuples
 pixels = [i[0] for i in pixels]
+#print ('Convert into single values from tuples')
+#print (pixels) #added
 
 # Save to a temp file named test.csv with comma delimiters
 imgTmp = np.array(pixels)
 imgTmp.tofile('test.csv', sep=',')
+print ('imgTmp Array')
+print (imgTmp) #added
 
 # Open the temp file and read into list
 testDataFile = open('test.csv')
 testDataList = testDataFile.readlines()
 testDataFile.close()
+#print ('Open the temp file and read into list')
+#print (testDataList)
 
 # Iterate through all list elements
 for record in testDataList:
@@ -58,4 +71,5 @@ for record in testDataList:
       output = ann.testNet(input)
 
 # Display output data vector
-print(output)
+#print (input) #added
+print (output)
