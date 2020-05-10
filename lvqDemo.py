@@ -127,7 +127,7 @@ def learning_vector_quantization(train, test, n_codebooks, lrate, epochs):
 seed(1)
 
 # load and prepare data
-filename = 'ionosphere.csv'
+filename = 'datasets/ionosphere.csv'
 dataset = load_csv(filename)
 for i in range(len(dataset[0])-1):
       str_column_to_float(dataset, i)

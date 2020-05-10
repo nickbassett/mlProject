@@ -39,14 +39,14 @@ def fit(x, y, theta):
 
 if __name__ == "__main__":
     # Load the data from the file
-    data = load_data("marks.txt", None)
+    data = load_data("datasets/marks.txt", None)
     # X = feature values, all the columns except the last column
     X = data.iloc[:, :-1]
     # Save a copy for the output plot
     X0 = X
 
     # y = target values, last column of the data frame
-    y = data.iloc[:, -1] 
+    y = data.iloc[:, -1]
 
     # Save a copy for the output plot
     y0 = y

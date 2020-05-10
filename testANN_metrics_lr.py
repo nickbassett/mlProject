@@ -11,12 +11,12 @@ onode =10
 lr = 0.1
 
 # Create the training list data
-dataFile = open('mnist_train.csv')
+dataFile = open('datasets/mnist_train.csv')
 dataList = dataFile.readlines()
 dataFile.close()
 
 #  Create the test list data
-testDataFile = open('mnist_test.csv')
+testDataFile = open('datasets/mnist_test.csv')
 testDataList = testDataFile.readlines()
 testDataFile.close()
 

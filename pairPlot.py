@@ -6,7 +6,7 @@ import seaborn as sns
 iris = sns.load_dataset("iris")
 
 # Generate the pair plots
-sns.pairplot(iris, hue="species", size=2.5)
+sns.pairplot(iris, hue="species", height=2.5)
 
 # Display the plots
 plt.show()

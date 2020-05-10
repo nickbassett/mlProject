@@ -14,7 +14,7 @@ b = np.random.randn(3)
 font = cv2.FONT_HERSHEY_SIMPLEX
 
 # Load the image and resize it. The image is taken from the dataset.
-orig = cv2.imread('dog.png')
+orig = cv2.imread('images/dog.png')
 image = cv2.resize(orig, (32,32)).flatten()
 
 # Compute output scores

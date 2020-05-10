@@ -4,12 +4,12 @@ from kNN import kNN
 from sklearn.metrics import mean_squared_error
 
 # Read the training CSV file
-training_data = pandas.read_csv("auto_train.csv")
+training_data = pandas.read_csv("datasets/auto_train.csv")
 x = training_data.iloc[:,:-1]
 y = training_data.iloc[:,-1]
 
 # Read the test CSV file
-test_data = pandas.read_csv("auto_test.csv")
+test_data = pandas.read_csv("datasets/auto_test.csv")
 x_test = test_data.iloc[:,:-1]
 y_test = test_data.iloc[:,-1]
 

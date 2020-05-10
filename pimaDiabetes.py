@@ -6,12 +6,12 @@ from sklearn import metrics #Import scikit-learn metrics module for accuracy cal
 col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
 
 # Load dataset
-pima = pd.read_csv("diabetes.csv", header=None, names=col_names)
+pima = pd.read_csv("datasets/diabetes.csv", header=None, names=col_names)
 print(pima.head())
 
 #split dataset in features and target variable
 feature_cols = ['pregnant', 'insulin', 'bmi', 'age', 'glucose', 'bp', 'pedigree']
-X = pima[feature_cols] # Features 
+X = pima[feature_cols] # Features
 y = pima.label # Target variable
 
 # Split dataset into training set and test set
@@ -28,5 +28,5 @@ clf = clf.fit(X_train,y_train)
 #Predict the response for test dataset
 y_pred = clf.predict(X_test.drop(0))
 
-# Model accuracy 
+# Model accuracy
 print("Accuracy:",metrics.accuracy_score(y_test.drop(0), y_pred))

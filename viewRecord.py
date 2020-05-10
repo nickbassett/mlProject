@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Create data list
-dataFile = open('mnist_train_100.csv')
+dataFile = open('datasets/mnist_train_100.csv')
 dataList = dataFile.readlines()
 dataFile.close()
 

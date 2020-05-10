@@ -17,3 +17,12 @@ print('pandas: {}'.format(pandas.__version__))
 # scikit-learn
 import sklearn
 print('sklearn: {}'.format(sklearn.__version__))
+# open cv2
+import cv2
+print('cv2: {}'.format(cv2.__version__))
+# open seaborn
+import seaborn
+print('seaborn: {}'.format(seaborn.__version__))
+# open tkinter
+#import tkinter
+#print('tkinter: {}'.format(tkinter.__version__))

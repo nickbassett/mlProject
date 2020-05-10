@@ -32,13 +32,13 @@ for record in dataList:
       ann.trainNet(inputT, train)
 
 # Create the test list data from an image
-img = Image.open('images/eight.jpg')
+img = Image.open('images/zero.jpg')
 img = img.resize((28,28), PIL.Image.ANTIALIAS)
 #img = img.resize((28,28), PIL.Image.NEAREST)
 
-#Image it as a grayscale
-#plt.imshow(img, cmap="Greys", interpolation="None")
-#plt.show()
+# Image it as a grayscale
+plt.imshow(img, cmap="Greys", interpolation="None")
+plt.show()
 
 # Read pixels into list
 pixels = list(img.getdata())

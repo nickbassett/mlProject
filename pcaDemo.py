@@ -7,7 +7,7 @@ from sklearn import decomposition
 from sklearn.preprocessing import scale
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
-df = pd.read_csv('iris.csv', header=None, sep=',')
+df = pd.read_csv('datasets/iris.csv', header=None, sep=',')
 df.columns=['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
 df.dropna(how="all", inplace=True) # Drops empty line at EOF
 

@@ -194,7 +194,7 @@ def bagging(train, test, max_depth, min_size, sample_size, n_trees):
 seed(1)
 
 # load and prepare data
-filename = 'sonar.all-data.csv'
+filename = 'datasets/sonar.all-data.csv'
 dataset = load_csv(filename)
 
 # convert string attributes to integers

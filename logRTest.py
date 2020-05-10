@@ -9,7 +9,7 @@ def load_data(path, header):
 
 if __name__ == "__main__":
 	# load the data from the file
-	data = load_data("marks.txt", None)
+	data = load_data("datasets/marks.txt", None)
 
 	# X = feature values, all the columns except the last column
 	X = data.iloc[:, :-1]

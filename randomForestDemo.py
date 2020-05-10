@@ -205,7 +205,7 @@ def random_forest(train, test, max_depth, min_size, sample_size, n_trees, n_feat
 seed(2)
 
 # load and prepare data
-filename = 'sonar.all-data.csv'
+filename = 'datasets/sonar.all-data.csv'
 dataset = load_csv(filename)
 
 # convert string attributes to integers

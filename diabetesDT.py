@@ -10,7 +10,7 @@ import collections
 col_names = ['pregnant', 'glucose', 'bp', 'skin', 'insulin', 'bmi', 'pedigree', 'age', 'label']
 
 # Load dataset
-pima = pd.read_csv("diabetes.csv", header=None, names=col_names)
+pima = pd.read_csv("datasets/diabetes.csv", header=None, names=col_names)
 
 #split dataset in features and target variable
 feature_cols = ['pregnant', 'insulin', 'bmi', 'age', 'glucose', 'bp', 'pedigree']
