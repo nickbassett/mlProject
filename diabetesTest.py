@@ -4,8 +4,8 @@ import seaborn as sns
 import pandas as pd
 
 # Load the CSV dataset
-dataset = pd.read_csv('datasets/diabetes.csv')
-dataset.head(10)
+dataset = pd.read_csv('datasets/pima-indians-diabetes.csv')
+print(dataset.head(10))
 
 # Define a histogram plot method
 def plotHistogram(values, label, feature, title):
