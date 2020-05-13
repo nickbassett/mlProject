@@ -2,3 +2,4 @@
 test.csv
 __pycache__/
 datasets/mnist_train.csv
+images/
